@@ -1,6 +1,6 @@
 # tvm
 
-## tiny virtual machine based on LC-3
+## tiny virtual machine based on LC-3 specs!
 
 
 This repo is for the implementation of an LC-3 Virtual Machine with an assembly in C --> [https://en.wikipedia.org/wiki/Little_Computer_3](https://en.wikipedia.org/wiki/Little_Computer_3)
