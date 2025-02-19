@@ -1,20 +1,27 @@
 # 🦜 `caique`
 
-tiny concatenative stack machine based on LC-3 specs
+## tiny concatenative stack machine based on LC-3 specs
+`caique` is a bytecode stack machine and a *concatenative stack language* that uses combinator composition to build subroutines (functions). It employs a very simple syntax that supports algebraic manipulation of programs. Subroutines operate on a shared data structure.
+
+Key aspects of `caique`:
+*   **Stack-based operation** `caique` uses a stack to pass values between combinators. Values are pushed onto the stack, and operations perform computations.
+*   **Compositional semantics** The syntax and semantics is inherently compositional. The reduction of any expression simplifies one function into another, without needing to apply functions to objects[2].
+*   **Point-free style** `caique` is *point-free*, meaning functions don't explicitly name the data they operate on.
 
 ### Definitions:
 
-`[]` means "QUOTATION".
+`  []` means "QUOTATION".
 
-`==` means "EVALUATE EXPRESSION" / "EQUIVALENT TO".
+`  ==` means "EVALUATE EXPRESSION" / "EQUIVALENT TO".
 
-`A B`  are "EXPRESSIONS".
+`  A B`  are "EXPRESSIONS".
 
-`:=` means "DEFINED AS".
+`  :=` means "DEFINED AS".
 
-`#`  means "INLINE COMMENT".
+`  #`  means "INLINE COMMENT".
 
 ### Built-in combinators:
+
 ```
 [B] [A] cat  # concatenate
 == [B A]
@@ -68,6 +75,8 @@ k    :=  [pop] dip call        # [B] [A] k  ==  A
 ```
 
 ## More info
+Concatenative languages --> [https://en.wikipedia.org/wiki/Concatenative_programming_language](https://en.wikipedia.org/wiki/Concatenative_programming_language)
+
 This repo is for the implementation of an LC-3 Virtual Machine with an assembly in C --> [https://en.wikipedia.org/wiki/Little_Computer_3](https://en.wikipedia.org/wiki/Little_Computer_3)
 
 LC-3 VM implementation! --> [https://www.jmeiners.com/lc3-vm/](https://www.jmeiners.com/lc3-vm/)
