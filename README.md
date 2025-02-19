@@ -11,7 +11,7 @@ Key aspects of **caique**:
 
 ### Definitions:
 ```
-      qoutation  -->  []
+      quotation  -->  []
 
     equivalence  -->  ==
 
@@ -53,7 +53,7 @@ cons  :=  alt qte alt cat   # [B] [A] cons == [[B] A]
 
 ```
 [alt] [idm] cons ==   # result: [[alt] idm]
-[alt] [idm] dip  ==   # result:idm [alt]
+[alt] [idm] dip  ==   # result: idm [alt]
 ```
 
 ## More info
