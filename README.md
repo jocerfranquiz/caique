@@ -25,12 +25,12 @@ in-line comment  -->  #
 ### Built-in combinators:
 
 ```
-[B] [A] cat ==  # [B A]    concatenate
-[B] [A] alt ==  # [A] [B]  alternate / swap
-[A] idm ==      # [A] [A]  idem / dup
-[A] qte ==      # [[A]]    quote
-[A] unq ==      # A        unquote
-[A] ers ==      # erase / pop
+[B] [A] cat ==  # [B A]    C oncatenate
+[B] [A] alt ==  # [A] [B]  Alternate / swap
+[A] idm ==      # [A] [A]  I dem / dup
+[A] qte ==      # [[A]]    Q uote
+[A] unq ==      # A        U nquote
+[A] ers ==      #          E rase / drop
 ```
 
 ### Built-in operators:
