@@ -1,6 +1,6 @@
-🦜 `caique == [c]oncatenate [a]lternate [i]dem [q]uote [u]nquote [e]rase`
+# 🦜 `caique == [c]oncatenate [a]lternate [i]dem [q]uote [u]nquote [e]rase`
 
-## tiny concatenative stack machine based on LC-3 specs
+tiny concatenative stack machine based on LC-3 specs
 
 ### Definitions:
 
