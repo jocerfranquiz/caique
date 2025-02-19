@@ -1,24 +1,26 @@
 # 🦜 `caique`
 
-## tiny concatenative stack machine based on LC-3 specs
+## A unique 8-bit concatenative stack machine based on LC-3 specs
 `caique` is a bytecode stack machine and a *concatenative stack language* that uses combinator composition to build subroutines (functions). It employs a very simple syntax that supports algebraic manipulation of programs. Subroutines operate on a shared data structure.
 
 Key aspects of `caique`:
 *   **Stack-based operation** `caique` uses a stack to pass values between combinators. Values are pushed onto the stack, and operations perform computations.
 *   **Compositional semantics** The syntax and semantics is inherently compositional. The reduction of any expression simplifies one function into another, without needing to apply functions.
 *   **Point-free style** `caique` is *point-free*, meaning functions don't explicitly name the data they operate on.
+*   **ASCII only** `caique` only operates over ASCII characters as unsigned integers (from 0 to 127).
 
 ### Definitions:
+```
+      qoutation  -->  []
 
-`  []` means "QUOTATION".
+    equivalence  -->  ==
 
-`  ==` means "EVALUATE EXPRESSION" / "EQUIVALENT TO".
+    expressiona  -->  A B
 
-`  A B`  are "EXPRESSIONS".
+      define as  -->  :=
 
-`  :=` means "DEFINED AS".
-
-`  #`  means "INLINE COMMENT".
+in-line comment  -->  #
+```
 
 ### Built-in combinators:
 
@@ -35,29 +37,31 @@ Key aspects of `caique`:
 [A] qte  # quote
 == [[A]]
 
-[A] uqt  # unquote
+[A] unq  # unquote
 == A
 
 [A] ers  # erase / pop
 ==
 ```
 
+### Built-in operators:
+
+```
+print stack  --> stk 
+clean stack  --> clr
+add numbers  --> add
+```
+
 ### Defining new combinators
 
 ```
-dip  :=  swap quote cat call   # [B] [A] dip == A [B]
-cons :=  swap quote swap cat   # [B] [A] cons == [[B] A]    
-sip  :=  [dup] dip dip         # [B] [A] sip   ==  [B] A [B]            
-take :=  [dip] cons cons       # [B] [A] take  ==  [A [B]]             
-sip2 :=  [cons sip] dup call   # [C] [B] [A] sip2  ==  [C] [B] A [C] [B]   
-cake :=  [cons] sip2 take      # [B] [A] cake  ==  [[B] A] [A [B]]     
-k    :=  [pop] dip call        # [B] [A] k  ==  A
+ dip  :=  alt qte cat unq   # [B] [A] dip == A [B]
+cons  :=  alt qte alt cat   # [B] [A] cons == [[B] A]    
 ```
 
 ### Examples
 
 ```
-
 [alt] [idm] cons
 == [alt] [idm] alt qte alt cat
 == [idm] [alt] qte alt cat
