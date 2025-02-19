@@ -12,13 +12,9 @@ Key aspects of **caique**:
 ### Definitions:
 ```
       quotation  -->  []
-
     equivalence  -->  ==
-
     expressions  -->  A B
-
       define as  -->  :=
-
 in-line comment  -->  #
 ```
 
@@ -27,10 +23,10 @@ in-line comment  -->  #
 ```
 [B] [A] cat ==  # [B A]    C oncatenate
 [B] [A] alt ==  # [A] [B]  A lternate / swap
-[A] idm ==      # [A] [A]  I dem / dup
-[A] qte ==      # [[A]]    Q uote
-[A] unq ==      # A        U nquote
-[A] ers ==      #          E rase / drop
+    [A] idm ==  # [A] [A]  I dem / dup
+    [A] qte ==  # [[A]]    Q uote
+    [A] unq ==  # A        U nquote
+    [A] ers ==  #          E rase / drop
 ```
 
 ### Built-in operators:
