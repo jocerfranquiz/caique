@@ -26,7 +26,7 @@ in-line comment  -->  #
 
 ```
 [B] [A] cat ==  # [B A]    C oncatenate
-[B] [A] alt ==  # [A] [B]  Alternate / swap
+[B] [A] alt ==  # [A] [B]  A lternate / swap
 [A] idm ==      # [A] [A]  I dem / dup
 [A] qte ==      # [[A]]    Q uote
 [A] unq ==      # A        U nquote
