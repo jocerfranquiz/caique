@@ -1,4 +1,4 @@
-# caique 🦜
+🦜
 `[c]oncatenate`
 `[a]lternate`
 `[i]dem`
