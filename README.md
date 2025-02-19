@@ -3,11 +3,11 @@
 ## A unique 8-bit concatenative stack machine based on LC-3 specs
 `caique` is a bytecode stack machine and a *concatenative stack language* that uses combinator composition to build subroutines (functions). It employs a very simple syntax that supports algebraic manipulation of programs. Subroutines operate on a shared data structure.
 
-Key aspects of `caique`:
-*   **Stack-based operation** `caique` uses a stack to pass values between combinators. Values are pushed onto the stack, and operations perform computations.
-*   **Compositional semantics** The syntax and semantics is inherently compositional. The reduction of any expression simplifies one function into another, without needing to apply functions.
-*   **Point-free style** `caique` is *point-free*, meaning functions don't explicitly name the data they operate on.
-*   **ASCII only** `caique` only operates over ASCII characters as unsigned integers (from 0 to 127).
+Key aspects of **caique**:
+*   *Stack-based operation* **caique** uses a stack to pass values between combinators. Values are pushed onto the stack, and operations perform computations.
+*   *Compositional semantics* The syntax and semantics is inherently compositional. The reduction of any expression simplifies one function into another, without needing to apply functions.
+*   *Point-free style* **caique** is **point-free**, meaning functions don't explicitly name the data they operate on.
+*   *ASCII only* **caique** only operates over ASCII characters as unsigned integers (from 0 to 127).
 
 ### Definitions:
 ```
@@ -15,7 +15,7 @@ Key aspects of `caique`:
 
     equivalence  -->  ==
 
-    expressiona  -->  A B
+    expressions  -->  A B
 
       define as  -->  :=
 
@@ -79,6 +79,7 @@ cons  :=  alt qte alt cat   # [B] [A] cons == [[B] A]
 ```
 
 ## More info
+
 Concatenative languages --> [https://en.wikipedia.org/wiki/Concatenative_programming_language](https://en.wikipedia.org/wiki/Concatenative_programming_language)
 
 This repo is for the implementation of an LC-3 Virtual Machine with an assembly in C --> [https://en.wikipedia.org/wiki/Little_Computer_3](https://en.wikipedia.org/wiki/Little_Computer_3)
