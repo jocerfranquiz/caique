@@ -10,11 +10,15 @@
 
 ### Definitions:
 
-`[]` means "QUOTATION"
-`==` means "EVALUATE EXPRESSION" / "EQUIVALENT TO"
-`A B`  are "EXPRESSIONS"
-`:=` means "DEFINED AS"
-`#`  means "INLINE COMMENT"
+`[]` means "QUOTATION".
+
+`==` means "EVALUATE EXPRESSION" / "EQUIVALENT TO".
+
+`A B`  are "EXPRESSIONS".
+
+`:=` means "DEFINED AS".
+
+`#`  means "INLINE COMMENT".
 
 ### Built-in combinators:
 ```
