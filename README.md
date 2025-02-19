@@ -32,7 +32,7 @@ tiny concatenative stack machine based on LC-3 specs
 [A] uqt  # unquote
 == A
 
-[A] e  # erase / pop
+[A] ers  # erase / pop
 ==
 ```
 
