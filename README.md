@@ -25,31 +25,21 @@ in-line comment  -->  #
 ### Built-in combinators:
 
 ```
-[B] [A] cat  # concatenate
-== [B A]
-
-[B] [A] alt  # alternate / swap
-==  [A] [B]
-
-[A] idm  # idem / dup
-== [A] [A]
-
-[A] qte  # quote
-== [[A]]
-
-[A] unq  # unquote
-== A
-
-[A] ers  # erase / pop
-==
+[B] [A] cat ==  # [B A]    concatenate
+[B] [A] alt ==  # [A] [B]  alternate / swap
+[A] idm ==      # [A] [A]  idem / dup
+[A] qte ==      # [[A]]    quote
+[A] unq ==      # A        unquote
+[A] ers ==      # erase / pop
 ```
 
 ### Built-in operators:
 
 ```
-print stack  --> stk 
-clean stack  --> clr
-add numbers  --> add
+stk  # print stack 
+clr  # clean stack
+add  # add two numbers and push to stack
+asc  # given a number print ASCII character
 ```
 
 ### Defining new combinators
@@ -62,20 +52,8 @@ cons  :=  alt qte alt cat   # [B] [A] cons == [[B] A]
 ### Examples
 
 ```
-[alt] [idm] cons
-== [alt] [idm] alt qte alt cat
-== [idm] [alt] qte alt cat
-== [idm] [[alt]] alt cat
-== [[alt]] [idm] cat
-== [[alt] idm]
-
-
-[alt] [idm] dip
-== [alt] [idm] alt qte cat call
-== [idm] [alt] qte cat call
-== [idm] [[alt]] cat call
-== [idm [alt]] call
-== idm [alt]
+[alt] [idm] cons ==   # result: [[alt] idm]
+[alt] [idm] dip  ==   # result:idm [alt]
 ```
 
 ## More info
