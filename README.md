@@ -5,7 +5,7 @@
 
 Key aspects of `caique`:
 *   **Stack-based operation** `caique` uses a stack to pass values between combinators. Values are pushed onto the stack, and operations perform computations.
-*   **Compositional semantics** The syntax and semantics is inherently compositional. The reduction of any expression simplifies one function into another, without needing to apply functions to objects[2].
+*   **Compositional semantics** The syntax and semantics is inherently compositional. The reduction of any expression simplifies one function into another, without needing to apply functions.
 *   **Point-free style** `caique` is *point-free*, meaning functions don't explicitly name the data they operate on.
 
 ### Definitions:
