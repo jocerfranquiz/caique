@@ -1,7 +1,7 @@
 # 🦜 `caique`
 
 ## A unique 8-bit concatenative stack machine based on LC-3 specs
-**caique** is a bytecode stack machine and a *concatenative stack language* that uses combinator composition to build subroutines (functions). It employs a very simple syntax that supports algebraic manipulation of programs. Subroutines operate on a shared data structure.
+**caique** is a bytecode stack machine and a **concatenative stack language** that uses combinator composition to build subroutines (functions). It employs a very simple syntax that supports algebraic manipulation of programs. Subroutines operate on a shared data structure.
 
 Key aspects of **caique**:
 *   *Stack-based operation:* **caique** uses a stack to pass values between combinators. Values are pushed onto the stack, and operations perform computations.
@@ -23,7 +23,7 @@ in-line comment  -->  #
 ```
 [B] [A] cat ==  # [B A]    Concatenate
 [B] [A] swp ==  # [A] [B]  Alternate / swap
-    [A] dup ==  # [A] [A]  Idem / dup
+    [A] dup ==  # [A] [A]  Idem / duplicate
     [A] quo ==  # [[A]]    Quote
     [A] unq ==  # A        Unquote
     [A] del ==  #          Erase / delete
@@ -32,9 +32,9 @@ in-line comment  -->  #
 ### Built-in operators:
 
 ```
-inp  # read a ASCII char as input and push the corresponding integer into the stack 
-add  # add two numbers and push to stack
+inp  # read a ASCII char as input and push the corresponding integer into the stack
 oup  # given a number output the corresponding ASCII character
+add  # add two numbers and push to stack
 ```
 
 ### Defining new combinators
