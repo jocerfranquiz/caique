@@ -1,8 +1,5 @@
-# Python-based caique VM as a proof of concept
 
-from typing import List
-
-MEMORY_MAX: int = 1 << 16   # 65536 locations
+MEMORY_MAX = 1 << 16   # 65536 locations
 
 # Condition Flags
 
@@ -24,7 +21,7 @@ R_PC    =  8   # Program counter
 R_COND  =  9
 R_COUNT = 10   # Total number of registers
 
-reg: List[int] = [0] * R_COUNT
+reg = [0] * R_COUNT
 
 # Opcodes
 
@@ -44,4 +41,5 @@ OP_JMP  = 12   # jump
 OP_RES  = 13   # reserved (unused)
 OP_LEA  = 14   # load effective address
 OP_TRAP = 15   # execute trap
+
 
