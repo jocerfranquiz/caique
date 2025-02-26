@@ -9,6 +9,29 @@ Key aspects of **caique**:
 *   *Point-free style:* **caique** is **point-free**, meaning functions don't explicitly name the data they operate on.
 *   *ASCII only:* **caique** only operates over ASCII characters as unsigned integers (from 0 to 127).
 
+**caique** is defined by the following EBNF:
+
+```EBNF
+(* Program structure *)
+program = expression | definition | program, program ;
+
+(* Basic expressions *)
+expression = quotation | combinator | operator | expression, expression ;
+
+(* Definitions *)
+definition = identifier, ":=", expression ;
+
+(* Quotations *)
+quotation = "[", expression*, "]" ;
+
+(* Built-in combinators *)
+combinator = "cat" | "swp" | "dup" | "quo" | "unq" | "del" | identifier ;
+
+(* Built-in operators *)
+operator = "in" | "out" | "add" ;
+```
+
+
 ### Definitions:
 ```
       quotation  -->  []
@@ -32,8 +55,8 @@ in-line comment  -->  #
 ### Built-in operators:
 
 ```
-inp  # read a ASCII char as input and push the corresponding integer into the stack
-oup  # given a number output the corresponding ASCII character
+in  # read a ASCII char as input and push the corresponding integer into the stack
+out  # given a number output the corresponding ASCII character
 add  # add two numbers and push to stack
 ```
 
